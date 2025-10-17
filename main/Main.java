@@ -1,7 +1,7 @@
 package main;
 
 import modelo.*;
-import fabrica.*;
+import factory.*;
 import java.util.*;
 
 public class Main {
@@ -15,16 +15,16 @@ public class Main {
         );
 
         // Creamos una fábrica que sabe cómo construir productos (cámara e impresión)
-        DispositivoFactory fabrica = new DispositivoFactoryImpl();
+        DispositivoFactory factory = new DispositivoFactoryImpl();
 
         // Usamos la fábrica para crear una cámara
-        Camara camara = fabrica.crearCamara();
+        Camara camara = factory.crearCamara();
 
         // Simulamos que la cámara toma una foto
         Foto foto = camara.tomarFoto();
 
         // Usamos la fábrica para transformar esa foto en una impresión
-        Impresion impresion = fabrica.crearImpresion(foto);
+        Impresion impresion = factory.crearImpresion(foto);
 
         // Creamos una lista de productos que el cliente quiere pedir
         List<Producto> productos = new ArrayList<>();

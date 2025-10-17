@@ -31,5 +31,5 @@ public class Pedido {
     public double calcularTotal() {
         return productos.stream().mapToDouble(Producto::calcularPrecio).sum();
     }
-
-    //
+} 
+//
