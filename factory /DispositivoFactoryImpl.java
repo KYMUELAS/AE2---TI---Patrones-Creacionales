@@ -1,4 +1,4 @@
-package fabrica;
+package factory;
 
 import modelo.Camara;
 import modelo.Foto;
